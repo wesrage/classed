@@ -1,0 +1,38 @@
+{
+  "name": "classed",
+  "version": "0.1.0",
+  "description": "Create reusable className wrappers for DOM elements in React",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/classed.js -o index.js",
+    "test": "jest"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesrage/classed.git"
+  },
+  "keywords": [
+    "React",
+    "DOM",
+    "CSS",
+    "class",
+    "className"
+  ],
+  "author": "Wesley Waldner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wesrage/classed/issues"
+  },
+  "homepage": "https://github.com/wesrage/classed#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0"
+  },
+  "dependencies": {
+    "classnames": "^2.0.0",
+    "react": "^0.12.0"
+  }
+}

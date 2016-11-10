@@ -1,6 +1,6 @@
 {
   "name": "classed",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create reusable className wrappers for DOM elements in React",
   "main": "index.js",
   "scripts": {

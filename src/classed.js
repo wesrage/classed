@@ -7,7 +7,7 @@ const factory = tagName => classes => {
         const className = classnames(classes, props.className);
         return React.createElement(tagName, { ...props, className });
     };
-    component.displayName = `classed.${tagName}(${classes})`;
+    component.displayName = `Classed.${tagName}`;
     return component;
 };
 

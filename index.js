@@ -19,10 +19,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var classed = {};
 var factory = function factory(tagName) {
     return function (classes) {
-        return function (props) {
+        var component = function component(props) {
             var className = (0, _classnames2.default)(classes, props.className);
             return _react2.default.createElement(tagName, _extends({}, props, { className: className }));
         };
+        component.displayName = 'Classed.' + tagName;
+        return component;
     };
 };
 

@@ -2,9 +2,9 @@ import React from 'react';
 import classnames from 'classnames';
 
 const classed = {};
-const factory = tagName => classes => {
+const factory = tagName => (...classes) => {
     const component = props => {
-        const className = classnames(classes, props.className);
+        const className = classnames(classnames(...classes), props.className);
         return React.createElement(tagName, { ...props, className });
     };
     component.displayName = `Classed.${tagName}`;

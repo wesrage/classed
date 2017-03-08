@@ -19,4 +19,4 @@ test('works like classnames', () => {
     testClassnames(['a']);
     testClassnames('a', 'b');
     testClassnames('a', { b: true }, { c: false }, ['d', 'e'], 'f');
-})
+});

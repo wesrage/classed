@@ -1,11 +1,14 @@
 {
   "name": "classed",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Create reusable className wrappers for DOM elements in React",
   "main": "index.js",
   "scripts": {
-    "build": "babel src/classed.js -o index.js",
-    "test": "jest"
+    "build": "npm run babel && npm run uglify",
+    "precommit": "npm run build && git add index.js",
+    "test": "jest --watch",
+    "babel": "babel src/classed.js -o index.js",
+    "uglify": "uglifyjs -c -m toplevel,reserved=[obex] -o index.js -- index.js"
   },
   "files": [
     "index.js"
@@ -28,6 +31,7 @@
   },
   "homepage": "https://github.com/wesrage/classed#readme",
   "devDependencies": {
+    "babel-loader": "^7.1.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-2": "^6.22.0",
@@ -35,8 +39,9 @@
     "jest": "^19.0.2",
     "react-test-renderer": "^15.0.0 || ^16.0.0"
   },
-  "peerDependencies": {
+  "dependencies": {
     "classnames": "^2.0.0",
-    "react": "^15.0.0 || ^16.0.0"
+    "react": "^15.0.0 || ^16.0.0",
+    "webpack": "^3.0.0"
   }
 }

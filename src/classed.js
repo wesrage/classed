@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classnames from 'classnames';
+import tagNames from './utils/tagNames';
 
 const classed = {};
 const factory = tagName => (...classes) => {
-    return class WrappedComponent extends Component {
+    return class WrappedComponent extends React.Component {
         static displayName = `Classed.${tagName}`;
         render() {
             const { className, innerRef, ...props } = this.props;
@@ -19,7 +20,7 @@ const factory = tagName => (...classes) => {
     }
 };
 
-Object.keys(React.DOM).forEach(tagName => {
+tagNames.forEach(tagName => {
     classed[tagName] = factory(tagName);
 });
 

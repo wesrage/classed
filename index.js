@@ -16,6 +16,10 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _tagNames = require('./utils/tagNames');
+
+var _tagNames2 = _interopRequireDefault(_tagNames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -35,8 +39,8 @@ var factory = function factory(tagName) {
             classes[_key] = arguments[_key];
         }
 
-        return _temp = _class = function (_Component) {
-            _inherits(WrappedComponent, _Component);
+        return _temp = _class = function (_React$Component) {
+            _inherits(WrappedComponent, _React$Component);
 
             function WrappedComponent() {
                 _classCallCheck(this, WrappedComponent);
@@ -63,11 +67,11 @@ var factory = function factory(tagName) {
             }]);
 
             return WrappedComponent;
-        }(_react.Component), _class.displayName = 'Classed.' + tagName, _temp;
+        }(_react2.default.Component), _class.displayName = 'Classed.' + tagName, _temp;
     };
 };
 
-Object.keys(_react2.default.DOM).forEach(function (tagName) {
+_tagNames2.default.forEach(function (tagName) {
     classed[tagName] = factory(tagName);
 });
 
